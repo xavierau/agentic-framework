@@ -1,0 +1,26 @@
+stateDiagram-v2
+
+    state Workflow {
+        direction TB
+        [*] --> Start
+        Start --> Node1: First Sequential Step
+        Node1 --> Node2
+
+        state Node2 <<fork>>
+        Node2 --> BranchA: Parallel Steps
+        Node2 --> Node3: Parallel Steps
+
+        state BranchA {
+            [*] --> SubStep1
+            SubStep1 --> SubStep2
+            SubStep2 --> SubStep3
+            SubStep3 --> [*]
+        }
+
+        BranchA --> Node4
+        Node3 --> Node4
+
+        state Node4 <<join>>
+        Node4 --> Node5: Second Sequential Step
+        Node5 --> [*]
+    }

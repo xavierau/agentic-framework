@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(uv pip install:*)",
+      "Bash(timeout 30 python -m:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(uv init:*)",
+      "Bash(uv add:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__get-library-docs",
+      "mcp__zen__thinkdeep",
+      "Bash(uv run:*)",
+      "mcp__zen__analyze",
+      "Bash(uv sync:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
